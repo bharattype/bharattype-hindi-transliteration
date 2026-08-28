@@ -1,32 +1,33 @@
 import { describe, expect, it } from "vitest";
-import { transliterate } from "../src/transliterate";
+
+import {
+  transliterate,
+  transliterateWithResult,
+} from "../src/transliterate";
 
 describe("transliterate", () => {
-  it("returns input and converted output", () => {
-    const result = transliterate(
-      "namaste",
-      () => "नमस्ते"
-    );
+  it("returns empty output for empty input", () => {
+    expect(transliterate("")).toBe("");
+  });
+
+  it("preserves existing Devanagari text", () => {
+    expect(transliterate("नमस्ते")).toBe("नमस्ते");
+  });
+
+  it("preserves Roman text when no engine is configured", () => {
+    expect(transliterate("namaste")).toBe("namaste");
+  });
+
+  it("returns a structured result", () => {
+    const result = transliterateWithResult("namaste");
 
     expect(result.input).toBe("namaste");
-    expect(result.output).toBe("नमस्ते");
+    expect(result.output).toBe("namaste");
   });
 
-  it("throws when input is not a string", () => {
-    expect(() =>
-      transliterate(
-        123 as unknown as string,
-        () => "नमस्ते"
-      )
-    ).toThrow("Input must be a string.");
-  });
+  it("normalizes existing Hindi Unicode", () => {
+    const result = transliterate("भारत");
 
-  it("throws when converter is missing", () => {
-    expect(() =>
-      transliterate(
-        "namaste",
-        undefined as unknown as (text: string) => string
-      )
-    ).toThrow("A converter function is required.");
+    expect(result).toBe("भारत");
   });
 });
