@@ -1,6 +1,6 @@
 {
   "name": "@bharattype/hindi-transliteration",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open-source Hindi text utilities including Kruti Dev to Unicode conversion for JavaScript and TypeScript.",
   "keywords": [
     "hindi",
