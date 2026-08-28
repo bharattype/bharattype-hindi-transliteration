@@ -1,0 +1,39 @@
+{
+  "name": "@bharattype/hindi-transliteration",
+  "version": "1.0.0",
+  "description": "Lightweight Hindi transliteration utilities for JavaScript and TypeScript applications.",
+  "keywords": [
+    "hindi",
+    "transliteration",
+    "hindi-typing",
+    "devanagari",
+    "indian-languages",
+    "bharattype"
+  ],
+  "license": "MIT",
+  "author": "BharatType",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bharattype/bharattype-hindi-transliteration.git"
+  },
+  "homepage": "https://bharattype.com",
+  "bugs": {
+    "url": "https://github.com/bharattype/bharattype-hindi-transliteration/issues"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  }
+}
