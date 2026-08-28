@@ -8,7 +8,6 @@ export {
   containsDevanagari,
   isDevanagariCharacter,
   isDevanagariText,
-  normalizeHindiText,
 } from "./unicode";
 
 export type {
