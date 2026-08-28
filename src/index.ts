@@ -16,3 +16,10 @@ export type {
   TransliterationOptions,
   TransliterationResult,
 } from "./types";
+
+export {
+  normalizeUnicode,
+  removeZeroWidthCharacters,
+  normalizeSpaces,
+  normalizeHindiText,
+} from "./normalize";
