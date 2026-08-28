@@ -1,12 +1,8 @@
-import { transliterate } from "../src/index";
+import { krutiDevToUnicode } from "../src";
 
-const result = transliterate(
-  "namaste",
-  (text) => {
-    // Replace this function with your own
-    // transliteration implementation.
-    return text;
-  }
-);
+const krutiDevText = "pkS";
 
-console.log(result);
+const unicodeText = krutiDevToUnicode(krutiDevText);
+
+console.log("Kruti Dev:", krutiDevText);
+console.log("Unicode:", unicodeText);
