@@ -23,3 +23,5 @@ export {
   normalizeSpaces,
   normalizeHindiText,
 } from "./normalize";
+
+export { krutiDevToUnicode } from "./krutidevToUnicode";
