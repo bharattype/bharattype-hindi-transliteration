@@ -1,7 +1,18 @@
 export {
-  transliterate
+  transliterate,
+  transliterateWithResult,
 } from "./transliterate";
 
+export {
+  cleanHindiText,
+  containsDevanagari,
+  isDevanagariCharacter,
+  isDevanagariText,
+  normalizeHindiText,
+} from "./unicode";
+
 export type {
-  TransliterationResult
-} from "./transliterate";
+  TransliterationFunction,
+  TransliterationOptions,
+  TransliterationResult,
+} from "./types";
